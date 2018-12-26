@@ -1,0 +1,245 @@
+﻿.form-control {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 4.5px 14px;
+    font-size: 13.5px;
+    line-height: 1.846153846;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid rgba(12, 12, 12, 0.12);
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+.form-inlineb .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.btn-sm {
+    font-size: 15px;
+}
+
+.radio-inline, .checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.input-groupb-addon {
+    padding: 4.5px 14px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+    color: #0c0c0c;
+    text-align: center;
+    background-color: #e5e5e6;
+    border: 1px solid rgba(12, 12, 12, 0.12);
+    border-radius: 2px;
+}
+
+.input-groupb-addon, .input-groupb-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.input-groupb-addon, .input-groupb-btn, .input-groupb .form-control {
+    display: table-cell;
+}
+
+    .input-groupb-addon:first-child, .input-groupb-btn:first-child {
+        padding-left: 9px;
+        padding-right: 10px;
+    }
+
+#errmsg {
+    color: red;
+}
+
+#errmsgA {
+    color: red;
+}
+
+#errmsgC {
+    color: red;
+}
+
+#errmsgW {
+    color: red;
+}
+
+.radio, .checkbox {
+    position: relative;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.input-groupb {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+    .input-groupb > .custom-file, .input-groupb > .custom-select, .input-groupb > .form-control {
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-bottom: 0;
+    }
+
+.form-control-plaintext.form-control-sm, .input-groupb-sm > .form-control-plaintext.form-control,
+.input-groupb-sm > .input-groupb-prepend > .form-control-plaintext.input-groupb-text,
+.input-groupb-sm > .input-groupb-append > .form-control-plaintext.input-groupb-text,
+.input-groupb-sm > .input-groupb-prepend > .form-control-plaintext.btn,
+.input-groupb-sm > .input-groupb-append > .form-control-plaintext.btn, .form-control-plaintext.form-control-lg, .input-groupb-lg > .form-control-plaintext.form-control,
+.input-groupb-lg > .input-groupb-prepend > .form-control-plaintext.input-groupb-text,
+.input-groupb-lg > .input-groupb-append > .form-control-plaintext.input-groupb-text,
+.input-groupb-lg > .input-groupb-prepend > .form-control-plaintext.btn,
+.input-groupb-lg > .input-groupb-append > .form-control-plaintext.btn {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form-control-sm, .input-groupb-sm > .form-control,
+.input-groupb-sm > .input-groupb-prepend > .input-groupb-text,
+.input-groupb-sm > .input-groupb-append > .input-groupb-text,
+.input-groupb-sm > .input-groupb-prepend > .btn,
+.input-groupb-sm > .input-groupb-append > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+select.form-control-sm:not([size]):not([multiple]), .input-groupb-sm > select.form-control:not([size]):not([multiple]),
+.input-groupb-sm > .input-groupb-prepend > select.input-groupb-text:not([size]):not([multiple]),
+.input-groupb-sm > .input-groupb-append > select.input-groupb-text:not([size]):not([multiple]),
+.input-groupb-sm > .input-groupb-prepend > select.btn:not([size]):not([multiple]),
+.input-groupb-sm > .input-groupb-append > select.btn:not([size]):not([multiple]) {
+    height: calc(1.8125rem + 2px);
+}
+
+.form-control-lg, .input-groupb-lg > .form-control,
+.input-groupb-lg > .input-groupb-prepend > .input-groupb-text,
+.input-groupb-lg > .input-groupb-append > .input-groupb-text,
+.input-groupb-lg > .input-groupb-prepend > .btn,
+.input-groupb-lg > .input-groupb-append > .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+select.form-control-lg:not([size]):not([multiple]), .input-groupb-lg > select.form-control:not([size]):not([multiple]),
+.input-groupb-lg > .input-groupb-prepend > select.input-groupb-text:not([size]):not([multiple]),
+.input-groupb-lg > .input-groupb-append > select.input-groupb-text:not([size]):not([multiple]),
+.input-groupb-lg > .input-groupb-prepend > select.btn:not([size]):not([multiple]),
+.input-groupb-lg > .input-groupb-append > select.btn:not([size]):not([multiple]) {
+    height: calc(2.875rem + 2px);
+}
+
+.input-groupb-prepend,
+.input-groupb-append {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+    .input-groupb-prepend .btn,
+    .input-groupb-append .btn {
+        position: relative;
+        z-index: 2;
+    }
+
+        .input-groupb-prepend .btn + .btn,
+        .input-groupb-prepend .btn + .input-groupb-text,
+        .input-groupb-prepend .input-groupb-text + .input-groupb-text,
+        .input-groupb-prepend .input-groupb-text + .btn,
+        .input-groupb-append .btn + .btn,
+        .input-groupb-append .btn + .input-groupb-text,
+        .input-groupb-append .input-groupb-text + .input-groupb-text,
+        .input-groupb-append .input-groupb-text + .btn {
+            margin-left: -1px;
+        }
+
+.input-groupb-prepend {
+    margin-right: -1px;
+}
+
+.input-groupb-append {
+    margin-left: -1px;
+}
+
+.input-groupb-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+    .input-groupb-text input[type="radio"],
+    .input-groupb-text input[type="checkbox"] {
+        margin-top: 0;
+    }
+
+.input-groupb > .input-groupb-prepend > .btn,
+.input-groupb > .input-groupb-prepend > .input-groupb-text,
+.input-groupb > .input-groupb-append:not(:last-child) > .btn,
+.input-groupb > .input-groupb-append:not(:last-child) > .input-groupb-text,
+.input-groupb > .input-groupb-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-groupb > .input-groupb-append:last-child > .input-groupb-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-groupb > .input-groupb-append > .btn,
+.input-groupb > .input-groupb-append > .input-groupb-text,
+.input-groupb > .input-groupb-prepend:not(:first-child) > .btn,
+.input-groupb > .input-groupb-prepend:not(:first-child) > .input-groupb-text,
+.input-groupb > .input-groupb-prepend:first-child > .btn:not(:first-child),
+.input-groupb > .input-groupb-prepend:first-child > .input-groupb-text:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

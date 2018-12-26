@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrelgastos" targetNamespace="http://tempuri.org/dsrelgastos.xsd" xmlns:mstns="http://tempuri.org/dsrelgastos.xsd" xmlns="http://tempuri.org/dsrelgastos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrelgastos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsrelgastos" msprop:Generator_UserDSName="dsrelgastos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblgastos" msprop:Generator_TableClassName="tblgastosDataTable" msprop:Generator_TableVarName="tabletblgastos" msprop:Generator_RowChangedName="tblgastosRowChanged" msprop:Generator_TablePropName="tblgastos" msprop:Generator_RowDeletingName="tblgastosRowDeleting" msprop:Generator_RowChangingName="tblgastosRowChanging" msprop:Generator_RowEvHandlerName="tblgastosRowChangeEventHandler" msprop:Generator_RowDeletedName="tblgastosRowDeleted" msprop:Generator_RowClassName="tblgastosRow" msprop:Generator_UserTableName="tblgastos" msprop:Generator_RowEvArgName="tblgastosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="opgid" msprop:Generator_ColumnVarNameInTable="columnopgid" msprop:Generator_ColumnPropNameInRow="opgid" msprop:Generator_ColumnPropNameInTable="opgidColumn" msprop:Generator_UserColumnName="opgid" type="xs:int" minOccurs="0" />
+              <xs:element name="opgref" msprop:Generator_ColumnVarNameInTable="columnopgref" msprop:Generator_ColumnPropNameInRow="opgref" msprop:Generator_ColumnPropNameInTable="opgrefColumn" msprop:Generator_UserColumnName="opgref" type="xs:string" minOccurs="0" />
+              <xs:element name="pedimento" msprop:Generator_ColumnVarNameInTable="columnpedimento" msprop:Generator_ColumnPropNameInRow="pedimento" msprop:Generator_ColumnPropNameInTable="pedimentoColumn" msprop:Generator_UserColumnName="pedimento" type="xs:string" minOccurs="0" />
+              <xs:element name="opgrelno" msprop:Generator_ColumnVarNameInTable="columnopgrelno" msprop:Generator_ColumnPropNameInRow="opgrelno" msprop:Generator_ColumnPropNameInTable="opgrelnoColumn" msprop:Generator_UserColumnName="opgrelno" type="xs:string" minOccurs="0" />
+              <xs:element name="opgrelnofecha" msprop:Generator_ColumnVarNameInTable="columnopgrelnofecha" msprop:Generator_ColumnPropNameInRow="opgrelnofecha" msprop:Generator_ColumnPropNameInTable="opgrelnofechaColumn" msprop:Generator_UserColumnName="opgrelnofecha" type="xs:string" minOccurs="0" />
+              <xs:element name="opgconceptoid" msprop:Generator_ColumnVarNameInTable="columnopgconceptoid" msprop:Generator_ColumnPropNameInRow="opgconceptoid" msprop:Generator_ColumnPropNameInTable="opgconceptoidColumn" msprop:Generator_UserColumnName="opgconceptoid" type="xs:short" minOccurs="0" />
+              <xs:element name="concepto" msprop:Generator_ColumnVarNameInTable="columnconcepto" msprop:Generator_ColumnPropNameInRow="concepto" msprop:Generator_ColumnPropNameInTable="conceptoColumn" msprop:Generator_UserColumnName="concepto" type="xs:string" minOccurs="0" />
+              <xs:element name="opgtipogasto" msprop:Generator_ColumnVarNameInTable="columnopgtipogasto" msprop:Generator_ColumnPropNameInRow="opgtipogasto" msprop:Generator_ColumnPropNameInTable="opgtipogastoColumn" msprop:Generator_UserColumnName="opgtipogasto" type="xs:short" minOccurs="0" />
+              <xs:element name="tipogasto" msprop:Generator_ColumnVarNameInTable="columntipogasto" msprop:Generator_ColumnPropNameInRow="tipogasto" msprop:Generator_ColumnPropNameInTable="tipogastoColumn" msprop:Generator_UserColumnName="tipogasto" type="xs:string" minOccurs="0" />
+              <xs:element name="opgmontogasto" msprop:Generator_ColumnVarNameInTable="columnopgmontogasto" msprop:Generator_ColumnPropNameInRow="opgmontogasto" msprop:Generator_ColumnPropNameInTable="opgmontogastoColumn" msprop:Generator_UserColumnName="opgmontogasto" type="xs:double" minOccurs="0" />
+              <xs:element name="cliente" msprop:Generator_ColumnVarNameInTable="columncliente" msprop:Generator_ColumnPropNameInRow="cliente" msprop:Generator_ColumnPropNameInTable="clienteColumn" msprop:Generator_UserColumnName="cliente" type="xs:string" minOccurs="0" />
+              <xs:element name="bc1" msprop:Generator_ColumnVarNameInTable="columnbc1" msprop:Generator_ColumnPropNameInRow="bc1" msprop:Generator_ColumnPropNameInTable="bc1Column" msprop:Generator_UserColumnName="bc1" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="bc2" msprop:Generator_ColumnVarNameInTable="columnbc2" msprop:Generator_ColumnPropNameInRow="bc2" msprop:Generator_ColumnPropNameInTable="bc2Column" msprop:Generator_UserColumnName="bc2" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

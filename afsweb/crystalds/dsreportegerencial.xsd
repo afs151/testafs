@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsreportegerencial" targetNamespace="http://tempuri.org/dsreportegerencial.xsd" xmlns:mstns="http://tempuri.org/dsreportegerencial.xsd" xmlns="http://tempuri.org/dsreportegerencial.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsreportegerencial" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsreportegerencial" msprop:Generator_UserDSName="dsreportegerencial">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="resumenmensual" msprop:Generator_TableClassName="resumenmensualDataTable" msprop:Generator_TableVarName="tableresumenmensual" msprop:Generator_RowChangedName="resumenmensualRowChanged" msprop:Generator_TablePropName="resumenmensual" msprop:Generator_RowDeletingName="resumenmensualRowDeleting" msprop:Generator_RowChangingName="resumenmensualRowChanging" msprop:Generator_RowEvHandlerName="resumenmensualRowChangeEventHandler" msprop:Generator_RowDeletedName="resumenmensualRowDeleted" msprop:Generator_RowClassName="resumenmensualRow" msprop:Generator_UserTableName="resumenmensual" msprop:Generator_RowEvArgName="resumenmensualRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:string" minOccurs="0" />
+              <xs:element name="valcomimpo" msprop:Generator_ColumnVarNameInTable="columnvalcomimpo" msprop:Generator_ColumnPropNameInRow="valcomimpo" msprop:Generator_ColumnPropNameInTable="valcomimpoColumn" msprop:Generator_UserColumnName="valcomimpo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valcomexpo" msprop:Generator_ColumnVarNameInTable="columnvalcomexpo" msprop:Generator_ColumnPropNameInRow="valcomexpo" msprop:Generator_ColumnPropNameInTable="valcomexpoColumn" msprop:Generator_UserColumnName="valcomexpo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valadu" msprop:Generator_ColumnVarNameInTable="columnvaladu" msprop:Generator_ColumnPropNameInRow="valadu" msprop:Generator_ColumnPropNameInTable="valaduColumn" msprop:Generator_UserColumnName="valadu" type="xs:decimal" minOccurs="0" />
+              <xs:element name="totimpo" msprop:Generator_ColumnVarNameInTable="columntotimpo" msprop:Generator_ColumnPropNameInRow="totimpo" msprop:Generator_ColumnPropNameInTable="totimpoColumn" msprop:Generator_UserColumnName="totimpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totexpo" msprop:Generator_ColumnVarNameInTable="columntotexpo" msprop:Generator_ColumnPropNameInRow="totexpo" msprop:Generator_ColumnPropNameInTable="totexpoColumn" msprop:Generator_UserColumnName="totexpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totoperaciones" msprop:Generator_ColumnVarNameInTable="columntotoperaciones" msprop:Generator_ColumnPropNameInRow="totoperaciones" msprop:Generator_ColumnPropNameInTable="totoperacionesColumn" msprop:Generator_UserColumnName="totoperaciones" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="resumenporaduana" msprop:Generator_TableClassName="resumenporaduanaDataTable" msprop:Generator_TableVarName="tableresumenporaduana" msprop:Generator_TablePropName="resumenporaduana" msprop:Generator_RowDeletingName="resumenporaduanaRowDeleting" msprop:Generator_RowChangingName="resumenporaduanaRowChanging" msprop:Generator_RowEvHandlerName="resumenporaduanaRowChangeEventHandler" msprop:Generator_RowDeletedName="resumenporaduanaRowDeleted" msprop:Generator_UserTableName="resumenporaduana" msprop:Generator_RowChangedName="resumenporaduanaRowChanged" msprop:Generator_RowEvArgName="resumenporaduanaRowChangeEvent" msprop:Generator_RowClassName="resumenporaduanaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aduana" msprop:Generator_ColumnVarNameInTable="columnaduana" msprop:Generator_ColumnPropNameInRow="aduana" msprop:Generator_ColumnPropNameInTable="aduanaColumn" msprop:Generator_UserColumnName="aduana" type="xs:string" minOccurs="0" />
+              <xs:element name="totimpo" msprop:Generator_ColumnVarNameInTable="columntotimpo" msprop:Generator_ColumnPropNameInRow="totimpo" msprop:Generator_ColumnPropNameInTable="totimpoColumn" msprop:Generator_UserColumnName="totimpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totexpo" msprop:Generator_ColumnVarNameInTable="columntotexpo" msprop:Generator_ColumnPropNameInRow="totexpo" msprop:Generator_ColumnPropNameInTable="totexpoColumn" msprop:Generator_UserColumnName="totexpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totop" msprop:Generator_ColumnVarNameInTable="columntotop" msprop:Generator_ColumnPropNameInRow="totop" msprop:Generator_ColumnPropNameInTable="totopColumn" msprop:Generator_UserColumnName="totop" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comparativoanual" msprop:Generator_TableClassName="comparativoanualDataTable" msprop:Generator_TableVarName="tablecomparativoanual" msprop:Generator_TablePropName="comparativoanual" msprop:Generator_RowDeletingName="comparativoanualRowDeleting" msprop:Generator_RowChangingName="comparativoanualRowChanging" msprop:Generator_RowEvHandlerName="comparativoanualRowChangeEventHandler" msprop:Generator_RowDeletedName="comparativoanualRowDeleted" msprop:Generator_UserTableName="comparativoanual" msprop:Generator_RowChangedName="comparativoanualRowChanged" msprop:Generator_RowEvArgName="comparativoanualRowChangeEvent" msprop:Generator_RowClassName="comparativoanualRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:string" minOccurs="0" />
+              <xs:element name="ano" msprop:Generator_ColumnVarNameInTable="columnano" msprop:Generator_ColumnPropNameInRow="ano" msprop:Generator_ColumnPropNameInTable="anoColumn" msprop:Generator_UserColumnName="ano" type="xs:short" minOccurs="0" />
+              <xs:element name="valcomimpo" msprop:Generator_ColumnVarNameInTable="columnvalcomimpo" msprop:Generator_ColumnPropNameInRow="valcomimpo" msprop:Generator_ColumnPropNameInTable="valcomimpoColumn" msprop:Generator_UserColumnName="valcomimpo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valcomexpo" msprop:Generator_ColumnVarNameInTable="columnvalcomexpo" msprop:Generator_ColumnPropNameInRow="valcomexpo" msprop:Generator_ColumnPropNameInTable="valcomexpoColumn" msprop:Generator_UserColumnName="valcomexpo" type="xs:double" minOccurs="0" />
+              <xs:element name="valadu" msprop:Generator_ColumnVarNameInTable="columnvaladu" msprop:Generator_ColumnPropNameInRow="valadu" msprop:Generator_ColumnPropNameInTable="valaduColumn" msprop:Generator_UserColumnName="valadu" type="xs:decimal" minOccurs="0" />
+              <xs:element name="totimpo" msprop:Generator_ColumnVarNameInTable="columntotimpo" msprop:Generator_ColumnPropNameInRow="totimpo" msprop:Generator_ColumnPropNameInTable="totimpoColumn" msprop:Generator_UserColumnName="totimpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totexpo" msprop:Generator_ColumnVarNameInTable="columntotexpo" msprop:Generator_ColumnPropNameInRow="totexpo" msprop:Generator_ColumnPropNameInTable="totexpoColumn" msprop:Generator_UserColumnName="totexpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totop" msprop:Generator_ColumnVarNameInTable="columntotop" msprop:Generator_ColumnPropNameInRow="totop" msprop:Generator_ColumnPropNameInTable="totopColumn" msprop:Generator_UserColumnName="totop" type="xs:short" minOccurs="0" />
+              <xs:element name="anoactual" msprop:Generator_ColumnVarNameInTable="columnanoactual" msprop:Generator_ColumnPropNameInRow="anoactual" msprop:Generator_ColumnPropNameInTable="anoactualColumn" msprop:Generator_UserColumnName="anoactual" type="xs:short" minOccurs="0" />
+              <xs:element name="anoanterior" msprop:Generator_ColumnVarNameInTable="columnanoanterior" msprop:Generator_ColumnPropNameInRow="anoanterior" msprop:Generator_ColumnPropNameInTable="anoanteriorColumn" msprop:Generator_UserColumnName="anoanterior" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="toptenproveedores" msprop:Generator_TableClassName="toptenproveedoresDataTable" msprop:Generator_TableVarName="tabletoptenproveedores" msprop:Generator_RowChangedName="toptenproveedoresRowChanged" msprop:Generator_TablePropName="toptenproveedores" msprop:Generator_RowDeletingName="toptenproveedoresRowDeleting" msprop:Generator_RowChangingName="toptenproveedoresRowChanging" msprop:Generator_RowEvHandlerName="toptenproveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="toptenproveedoresRowDeleted" msprop:Generator_RowClassName="toptenproveedoresRow" msprop:Generator_UserTableName="toptenproveedores" msprop:Generator_RowEvArgName="toptenproveedoresRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom" msdata:Caption="ano" msprop:Generator_ColumnVarNameInTable="columnnom" msprop:Generator_ColumnPropNameInRow="nom" msprop:Generator_ColumnPropNameInTable="nomColumn" msprop:Generator_UserColumnName="nom" type="xs:short" minOccurs="0" />
+              <xs:element name="valcomimpo" msprop:Generator_ColumnVarNameInTable="columnvalcomimpo" msprop:Generator_ColumnPropNameInRow="valcomimpo" msprop:Generator_ColumnPropNameInTable="valcomimpoColumn" msprop:Generator_UserColumnName="valcomimpo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valcomexpo" msprop:Generator_ColumnVarNameInTable="columnvalcomexpo" msprop:Generator_ColumnPropNameInRow="valcomexpo" msprop:Generator_ColumnPropNameInTable="valcomexpoColumn" msprop:Generator_UserColumnName="valcomexpo" type="xs:double" minOccurs="0" />
+              <xs:element name="valadu" msprop:Generator_ColumnVarNameInTable="columnvaladu" msprop:Generator_ColumnPropNameInRow="valadu" msprop:Generator_ColumnPropNameInTable="valaduColumn" msprop:Generator_UserColumnName="valadu" type="xs:decimal" minOccurs="0" />
+              <xs:element name="totimpo" msprop:Generator_ColumnVarNameInTable="columntotimpo" msprop:Generator_ColumnPropNameInRow="totimpo" msprop:Generator_ColumnPropNameInTable="totimpoColumn" msprop:Generator_UserColumnName="totimpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totexpo" msprop:Generator_ColumnVarNameInTable="columntotexpo" msprop:Generator_ColumnPropNameInRow="totexpo" msprop:Generator_ColumnPropNameInTable="totexpoColumn" msprop:Generator_UserColumnName="totexpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totop" msprop:Generator_ColumnVarNameInTable="columntotop" msprop:Generator_ColumnPropNameInRow="totop" msprop:Generator_ColumnPropNameInTable="totopColumn" msprop:Generator_UserColumnName="totop" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="resumenxcategoria" msprop:Generator_TableClassName="resumenxcategoriaDataTable" msprop:Generator_TableVarName="tableresumenxcategoria" msprop:Generator_RowChangedName="resumenxcategoriaRowChanged" msprop:Generator_TablePropName="resumenxcategoria" msprop:Generator_RowDeletingName="resumenxcategoriaRowDeleting" msprop:Generator_RowChangingName="resumenxcategoriaRowChanging" msprop:Generator_RowEvHandlerName="resumenxcategoriaRowChangeEventHandler" msprop:Generator_RowDeletedName="resumenxcategoriaRowDeleted" msprop:Generator_RowClassName="resumenxcategoriaRow" msprop:Generator_UserTableName="resumenxcategoria" msprop:Generator_RowEvArgName="resumenxcategoriaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:short" minOccurs="0" />
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:string" minOccurs="0" />
+              <xs:element name="totsalado" msprop:Generator_ColumnVarNameInTable="columntotsalado" msprop:Generator_ColumnPropNameInRow="totsalado" msprop:Generator_ColumnPropNameInTable="totsaladoColumn" msprop:Generator_UserColumnName="totsalado" type="xs:short" minOccurs="0" />
+              <xs:element name="totwetblue" msprop:Generator_ColumnVarNameInTable="columntotwetblue" msprop:Generator_ColumnPropNameInRow="totwetblue" msprop:Generator_ColumnPropNameInTable="totwetblueColumn" msprop:Generator_UserColumnName="totwetblue" type="xs:short" minOccurs="0" />
+              <xs:element name="totnormal" msprop:Generator_ColumnVarNameInTable="columntotnormal" msprop:Generator_ColumnPropNameInRow="totnormal" msprop:Generator_ColumnPropNameInTable="totnormalColumn" msprop:Generator_UserColumnName="totnormal" type="xs:short" minOccurs="0" />
+              <xs:element name="otros" msprop:Generator_ColumnVarNameInTable="columnotros" msprop:Generator_ColumnPropNameInRow="otros" msprop:Generator_ColumnPropNameInTable="otrosColumn" msprop:Generator_UserColumnName="otros" type="xs:short" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rojosmensual" msprop:Generator_TableClassName="rojosmensualDataTable" msprop:Generator_TableVarName="tablerojosmensual" msprop:Generator_RowChangedName="rojosmensualRowChanged" msprop:Generator_TablePropName="rojosmensual" msprop:Generator_RowDeletingName="rojosmensualRowDeleting" msprop:Generator_RowChangingName="rojosmensualRowChanging" msprop:Generator_RowEvHandlerName="rojosmensualRowChangeEventHandler" msprop:Generator_RowDeletedName="rojosmensualRowDeleted" msprop:Generator_RowClassName="rojosmensualRow" msprop:Generator_UserTableName="rojosmensual" msprop:Generator_RowEvArgName="rojosmensualRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:string" minOccurs="0" />
+              <xs:element name="ano" msprop:Generator_ColumnVarNameInTable="columnano" msprop:Generator_ColumnPropNameInRow="ano" msprop:Generator_ColumnPropNameInTable="anoColumn" msprop:Generator_UserColumnName="ano" type="xs:short" minOccurs="0" />
+              <xs:element name="total_rojos" msprop:Generator_ColumnVarNameInTable="columntotal_rojos" msprop:Generator_ColumnPropNameInRow="total_rojos" msprop:Generator_ColumnPropNameInTable="total_rojosColumn" msprop:Generator_UserColumnName="total_rojos" type="xs:short" minOccurs="0" />
+              <xs:element name="cruzadas" msprop:Generator_ColumnVarNameInTable="columncruzadas" msprop:Generator_ColumnPropNameInRow="cruzadas" msprop:Generator_ColumnPropNameInTable="cruzadasColumn" msprop:Generator_UserColumnName="cruzadas" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="remesastable" msprop:Generator_TableClassName="remesastableDataTable" msprop:Generator_TableVarName="tableremesastable" msprop:Generator_RowChangedName="remesastableRowChanged" msprop:Generator_TablePropName="remesastable" msprop:Generator_RowDeletingName="remesastableRowDeleting" msprop:Generator_RowChangingName="remesastableRowChanging" msprop:Generator_RowEvHandlerName="remesastableRowChangeEventHandler" msprop:Generator_RowDeletedName="remesastableRowDeleted" msprop:Generator_RowClassName="remesastableRow" msprop:Generator_UserTableName="remesastable" msprop:Generator_RowEvArgName="remesastableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aduana" msprop:Generator_ColumnVarNameInTable="columnaduana" msprop:Generator_ColumnPropNameInRow="aduana" msprop:Generator_ColumnPropNameInTable="aduanaColumn" msprop:Generator_UserColumnName="aduana" type="xs:string" minOccurs="0" />
+              <xs:element name="totremesas" msprop:Generator_ColumnVarNameInTable="columntotremesas" msprop:Generator_ColumnPropNameInRow="totremesas" msprop:Generator_ColumnPropNameInTable="totremesasColumn" msprop:Generator_UserColumnName="totremesas" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rojosxaduana" msprop:Generator_TableClassName="rojosxaduanaDataTable" msprop:Generator_TableVarName="tablerojosxaduana" msprop:Generator_RowChangedName="rojosxaduanaRowChanged" msprop:Generator_TablePropName="rojosxaduana" msprop:Generator_RowDeletingName="rojosxaduanaRowDeleting" msprop:Generator_RowChangingName="rojosxaduanaRowChanging" msprop:Generator_RowEvHandlerName="rojosxaduanaRowChangeEventHandler" msprop:Generator_RowDeletedName="rojosxaduanaRowDeleted" msprop:Generator_RowClassName="rojosxaduanaRow" msprop:Generator_UserTableName="rojosxaduana" msprop:Generator_RowEvArgName="rojosxaduanaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aduana" msprop:Generator_ColumnVarNameInTable="columnaduana" msprop:Generator_ColumnPropNameInRow="aduana" msprop:Generator_ColumnPropNameInTable="aduanaColumn" msprop:Generator_UserColumnName="aduana" type="xs:short" minOccurs="0" />
+              <xs:element name="totalrojos" msprop:Generator_ColumnVarNameInTable="columntotalrojos" msprop:Generator_ColumnPropNameInRow="totalrojos" msprop:Generator_ColumnPropNameInTable="totalrojosColumn" msprop:Generator_UserColumnName="totalrojos" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="totalxdia" msprop:Generator_TableClassName="totalxdiaDataTable" msprop:Generator_TableVarName="tabletotalxdia" msprop:Generator_TablePropName="totalxdia" msprop:Generator_RowDeletingName="totalxdiaRowDeleting" msprop:Generator_RowChangingName="totalxdiaRowChanging" msprop:Generator_RowEvHandlerName="totalxdiaRowChangeEventHandler" msprop:Generator_RowDeletedName="totalxdiaRowDeleted" msprop:Generator_UserTableName="totalxdia" msprop:Generator_RowChangedName="totalxdiaRowChanged" msprop:Generator_RowEvArgName="totalxdiaRowChangeEvent" msprop:Generator_RowClassName="totalxdiaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:string" minOccurs="0" />
+              <xs:element name="totmon" msprop:Generator_ColumnVarNameInTable="columntotmon" msprop:Generator_ColumnPropNameInRow="totmon" msprop:Generator_ColumnPropNameInTable="totmonColumn" msprop:Generator_UserColumnName="totmon" type="xs:short" minOccurs="0" />
+              <xs:element name="tottue" msprop:Generator_ColumnVarNameInTable="columntottue" msprop:Generator_ColumnPropNameInRow="tottue" msprop:Generator_ColumnPropNameInTable="tottueColumn" msprop:Generator_UserColumnName="tottue" type="xs:short" minOccurs="0" />
+              <xs:element name="totwed" msprop:Generator_ColumnVarNameInTable="columntotwed" msprop:Generator_ColumnPropNameInRow="totwed" msprop:Generator_ColumnPropNameInTable="totwedColumn" msprop:Generator_UserColumnName="totwed" type="xs:short" minOccurs="0" />
+              <xs:element name="totthu" msprop:Generator_ColumnVarNameInTable="columntotthu" msprop:Generator_ColumnPropNameInRow="totthu" msprop:Generator_ColumnPropNameInTable="totthuColumn" msprop:Generator_UserColumnName="totthu" type="xs:short" minOccurs="0" />
+              <xs:element name="totfri" msprop:Generator_ColumnVarNameInTable="columntotfri" msprop:Generator_ColumnPropNameInRow="totfri" msprop:Generator_ColumnPropNameInTable="totfriColumn" msprop:Generator_UserColumnName="totfri" type="xs:short" minOccurs="0" />
+              <xs:element name="totsat" msprop:Generator_ColumnVarNameInTable="columntotsat" msprop:Generator_ColumnPropNameInRow="totsat" msprop:Generator_ColumnPropNameInTable="totsatColumn" msprop:Generator_UserColumnName="totsat" type="xs:short" minOccurs="0" />
+              <xs:element name="totsun" msprop:Generator_ColumnVarNameInTable="columntotsun" msprop:Generator_ColumnPropNameInRow="totsun" msprop:Generator_ColumnPropNameInTable="totsunColumn" msprop:Generator_UserColumnName="totsun" type="xs:short" minOccurs="0" />
+              <xs:element name="totimpo" msprop:Generator_ColumnVarNameInTable="columntotimpo" msprop:Generator_ColumnPropNameInRow="totimpo" msprop:Generator_ColumnPropNameInTable="totimpoColumn" msprop:Generator_UserColumnName="totimpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totexpo" msprop:Generator_ColumnVarNameInTable="columntotexpo" msprop:Generator_ColumnPropNameInRow="totexpo" msprop:Generator_ColumnPropNameInTable="totexpoColumn" msprop:Generator_UserColumnName="totexpo" type="xs:short" minOccurs="0" />
+              <xs:element name="totoperaciones" msprop:Generator_ColumnVarNameInTable="columntotoperaciones" msprop:Generator_ColumnPropNameInRow="totoperaciones" msprop:Generator_ColumnPropNameInTable="totoperacionesColumn" msprop:Generator_UserColumnName="totoperaciones" type="xs:short" minOccurs="0" />
+              <xs:element name="adic1" msprop:Generator_ColumnVarNameInTable="columnadic1" msprop:Generator_ColumnPropNameInRow="adic1" msprop:Generator_ColumnPropNameInTable="adic1Column" msprop:Generator_UserColumnName="adic1" type="xs:short" minOccurs="0" />
+              <xs:element name="adic2" msprop:Generator_ColumnVarNameInTable="columnadic2" msprop:Generator_ColumnPropNameInRow="adic2" msprop:Generator_ColumnPropNameInTable="adic2Column" msprop:Generator_UserColumnName="adic2" type="xs:short" minOccurs="0" />
+              <xs:element name="adic3" msprop:Generator_ColumnVarNameInTable="columnadic3" msprop:Generator_ColumnPropNameInRow="adic3" msprop:Generator_ColumnPropNameInTable="adic3Column" msprop:Generator_UserColumnName="adic3" type="xs:short" minOccurs="0" />
+              <xs:element name="adic4" msprop:Generator_ColumnVarNameInTable="columnadic4" msprop:Generator_ColumnPropNameInRow="adic4" msprop:Generator_ColumnPropNameInTable="adic4Column" msprop:Generator_UserColumnName="adic4" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

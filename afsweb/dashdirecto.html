@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AFS Dashboard</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- BEGIN META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="your,keywords">
+    <meta name="description" content="Short explanation about this website">
+    <!-- END META -->
+    <!-- BEGIN STYLESHEETS -->
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-3/bootstrap.css?1422792965" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-3/materialadmin.css?1425466319" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-3/font-awesome.min.css?1422529194" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-3/material-design-iconic-font.min.css?1421434286" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-3/libs/rickshaw/rickshaw.css?1422792967" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-3/libs/morris/morris.core.css?1420463396" />
+    <link rel="stylesheet" href="assets/js/libs/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="assets/js/libs/jqwidgets/styles/jqx.bootstrap.css" type="text/css" />
+    <link href="assets/js/libs/dropzone/dropzone-theme.css" rel="stylesheet" />
+    <style>
+        .jqx-notification-container {
+            z-index: 1000;
+        }
+
+        #navcontainer ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+            #navcontainer ul li {
+                display: inline;
+            }
+
+                #navcontainer ul li a {
+                    text-decoration: none;
+                    padding: .2em 1em;
+                }
+
+                    #navcontainer ul li a:hover {
+                        color: #fff;
+                        background-color: #369;
+                    }
+
+        .aqua {
+            background-color: aqua;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .brown {
+            background-color: sandybrown;
+        }
+
+        .gray {
+            background-color: lightslategray;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="messageNotification">
+        <div>
+            <div>Bienvenido:<span id="notificationuser" style="font-weight: bold;"></span></div>
+        </div>
+    </div>
+    <div id="timeNotification">
+        <div><span id="currentTime" style="font-weight: bold;"></span>.</div>
+    </div>
+    <div id="successNotification">
+        <div><span id="successmsg"></span></div>
+    </div>
+    <div id="errorNotification">
+        <div><span id="errormsg"></span></div>
+    </div>
+    <div id="warningNotification">
+        <div><span id="warningmsg"></span></div>
+    </div>
+    <div id="jqxgriddirectos">
+    </div>
+    <div class="modal fade" id="formstatus" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtstatus">Captura estatus de trafico <span id="txtstatusspan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select id="txtstatusref" class="form-control">
+                                    <option value="0"></option>
+                                    <option value="1">DOCUMENTOS DIGITALIZADOS</option>
+                                    <option value="2">CAMBIOS REQUERIDOS</option>
+                                    <option value="3">PROFORMA LISTA</option>
+                                    <option value="4">COVE LISTO</option>
+                                    <option value="5">PAGO AUTORIZADO</option>
+                                    <option value="6">VALIDANDO</option>
+                                    <option value="7">PAGADO</option>
+                                    <option value="8">CANCELADO</option>
+                                    <option value="9">REVISION DE DOCUMENTOS</option>
+                                    <option value="10">PENDIENTE</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturastatus" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formejecutivo" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtejecutivo">Captura EJ de Trafico <span id="txtejecutivospan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select id="txtejecutivoref" class="form-control">
+                                    <option value="0"></option>
+                                    <option value="1">ARMANDO</option>
+                                    <option value="2">BENITO</option>
+                                    <option value="3">CLAUDIA</option>
+                                    <option value="4">CRISTIAN</option>
+                                    <option value="5">DANIELA</option>
+                                    <option value="6">DAVID</option>
+                                    <option value="7">EDITH</option>
+                                    <option value="8">ELENA</option>
+                                    <option value="9">ESMERALDA</option>
+                                    <option value="10">GIANCARLO</option>
+                                    <option value="11">JANETH</option>
+                                    <option value="12">KARLA</option>
+                                    <option value="13">LETTY</option>
+                                    <option value="14">LINDA</option>
+                                    <option value="15">LUIS</option>
+                                    <option value="16">MARISSA</option>
+                                    <option value="17">NORMA</option>
+                                    <option value="18">OMAR</option>
+                                    <option value="19">ROSARIO</option>
+                                    <option value="20">SANDRA</option>
+                                    <option value="21">SINA</option>
+                                    <option value="22">SOFIA</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturaejecutivo" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formelaboro" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtelaboro">Captura EJ de Pedimento <span id="txtelaborospan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select id="txtelabororef" class="form-control">
+                                    <option value="0"></option>
+                                    <option value="1">ALFONSO</option>
+                                    <option value="2">ANGELICA</option>
+                                    <option value="3">ERICA</option>
+                                    <option value="4">ESMERALDA</option>
+                                    <option value="5">LUIS</option>
+                                    <option value="6">MARIO</option>
+                                    <option value="7">RAUL</option>
+                                    <option value="8">SANDRA</option>
+                                    <option value="9">SARAI</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturaelaboro" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formestatusbod" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtestatusbod">Captura estatus en bodega de trafico <span id="txtestatusbodspan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select id="txtestatusbodref" class="form-control">
+                                    <option value="0"></option>
+                                    <option value="1">PENDIENTE ORDEN DE CARGA</option>
+                                    <option value="2">ORDEN ENTREGADA</option>
+                                    <option value="3">EN PROCESO</option>
+                                    <option value="4">CARGADA</option>
+                                    <option value="5">DIRECTA</option>
+                                    <option value="6">CANCELADA</option>
+                                    <option value="7">CON DETALLE</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturaestatusbod" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formestatusaduana" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtestatusaduana">Captura estatus en bodega de trafico <span id="txtestatusaduanaspan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select id="txtestatusaduanaref" class="form-control">
+                                    <option value="0"></option>
+                                    <option value="1">PEDIMENTO PAGADO</option>
+                                    <option value="2">SALIO DE PATIO</option>
+                                    <option value="3">CRUZE VERDE</option>
+                                    <option value="4">CRUZE ROJO</option>
+                                    <option value="5">CRUZE ROJO GAMA</option>
+                                    <option value="6">DESADUANADO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturaestatusaduana" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formitn" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtadelanta">Captura ITN de trafico <span id="txtadelantaspan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" name="txtitnref" id="txtitnref" class="form-control" placeholder="ITN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturaitn" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formbs" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtrefobs">Captura observaciones de trafico <span id="txtrefobsspan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea name="txtobsrefs" id="txtobsrefs" class="form-control" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturaobs" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formhist" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtrefhist">Historial de trafico <span id="txtrefhistspan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tab-pane" id="activity">
+                                    <ul class="timeline collapse-lg timeline-hairline"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <textarea name="txthistrefs" id="txthistrefs" class="form-control" rows="2" required></textarea>
+                            </div>
+                            <div class="col-sm-2">
+                                <br />
+                                <button type="button" class="btn ink-reaction btn-floating-action btn-primary" id="cmdguardahist"><i class="fa fa-send"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formreset" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="H1">Programar de trafico</h4>
+                </div>
+                <div class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="txtreferencia" id="txtreferencia" class="form-control" placeholder="Referencia">
+                                </div>
+                                <div class="col-sm-2">
+                                    <button class="btn btn-icon-toggle ink-reaction" id="cmdbuscaref"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <input type="text" name="txtcliente" id="txtcliente" class="form-control" placeholder="Cliente">
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <label for="cbogrupotr">EQUIPO</label>
+                                    <select id="cbovechiculo" class="form-control">
+                                        <option value="0">CAJA</option>
+                                        <option value="1">PLATAFORMA</option>
+                                        <option value="2">SMLB</option>
+                                        <option value="3">CAMIONETA</option>
+                                        <option value="4">3.5 TON</option>
+                                        <option value="5">RABON</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-11">
+                                    <label class="radio-styled">
+                                        <input type="radio" name="inlineRadioOptions" value="1" checked><span>Carga Completa</span>
+                                    </label>
+                                    <label class="radio-styled">
+                                        <input type="radio" name="inlineRadioOptions" value="6"><span>Camion Directo</span>
+                                    </label>
+                                    <label class="radio-styled">
+                                        <input type="radio" name="inlineRadioOptions" value="2"><span>Exportacion</span>
+                                    </label>
+                                    <label class="radio-styled">
+                                        <input type="radio" name="inlineRadioOptions" value="3"><span>Consolidado</span>
+                                    </label>
+                                    <label class="radio-styled">
+                                        <input type="radio" name="inlineRadioOptions" value="4"><span>Furgones</span>
+                                    </label>
+                                    <label class="radio-styled">
+                                        <input type="radio" name="inlineRadioOptions" value="5"><span>Adelantados</span>
+                                    </label>
+                                </div>
+                                <!--end .col -->
+
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <label for="cbogrupotr">GRUPO DE TRABAJO</label>
+                                    <select id="cbogrupotr" class="form-control">
+                                        <option value="0">TODOS</option>
+                                        <option value="1">EQUIPO 1</option>
+                                        <option value="2">EQUIPO 2</option>
+                                        <option value="3">EQUIPO 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="btnprograma" type="button" class="btn btn-primary">Programar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formbuscaentrada" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="hentrada">Programar Remesa</h4>
+                </div>
+                <div class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="txtentrada" id="txtentrada" class="form-control" placeholder="Entrada de bodega">
+                                </div>
+                                <div class="col-sm-2">
+                                    <button class="btn btn-icon-toggle ink-reaction" id="cmdbuscaentrada"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <input type="text" name="txtclienteentrada" id="txtclienteentrada" class="form-control" placeholder="Cliente">
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-3">
+                                    <label>Consecutivo Remesa</label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" name="txtconsremesa" id="txtconsremesa" class="form-control" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="btnprogramaentrada" type="button" class="btn btn-primary">Programar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formconsolidado" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="txtconsolida">Consolidar trafico <span id="txtconsolidaspan"></span></h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <label class="form-control" id="txtconsco"></label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" name="txtconsref" id="txtconsref" class="form-control" placeholder="ASIGNE CLAVE DE CONSOLIDADO">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="cmdcapturaconsolidado" type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formcomments" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="H2">Tus comentarios son importantes para nosotros</h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="textarea1">Envianos tus comentarios</label>
+                            <textarea name="textarea1" id="textarea1" class="form-control" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="btnenviarcomments" type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formerrors" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="H3">Asignacion de ticket de reporte</h4>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="textarea1">Favor de envianos una descripcion breve del problema</label>
+                            <textarea name="textarea2" id="textarea2" class="form-control" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="btnsenderror" type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="formfileupload" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">SUBIR FOTOGRAFIAS DE REFERENCIA: <span id="txtrefuploadspan"></span></h4>
+                </div>
+                <div class="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select id="selectTipo" name="selectTipo" class="form-control">
+                                    <option value="0">FOTO DE ENTRADA</option>
+                                    <option value="1">FOTO DE CARGA</option>
+                                    <option value="3">FOTO DE SALIDA</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr class="ruler-xl" />
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-content">
+                                    <form id="mydropzone" class="dropzone" action="#" method="post" runat="server" enctype="multipart/form-data">
+                                        <div class="dz-default dz-message"><span>Arrastre los archivos a subir o de click en esta seccion</span></div>
+                                        <div class="fallback" hidden>
+                                            <input id="filessent" name="fil" type="file" multiple />
+                                        </div>
+                                        <div id="dz-preview">
+                                            <div>
+                                                <div><span id="data-dz-name"></span></div>
+                                                <div><span id="data-dz-size"></span></div>
+                                            </div>
+                                            <div><span id="data-dz-uploadprogress"></span></div>
+                                            <div><span id="data-dz-errormessage"></span></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="btnuploadfile" type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div style="visibility: hidden;">
+        <div id='menudir'>
+            <ul>
+                <li>Capturar ITN</li>
+                <li>Ver/Capturar historial de trafico</li>
+                <li>Capturar observaciones</li>
+                <li>Capturar EJ Pedimento</li>
+                <li>Capturar EJ Trafico</li>
+                <li>Capturar estatus trafico</li>
+                <li>Capturar estatus de bodega</li>
+                <li>Capturar estatus en aduana</li>
+                <li>Consolidar</li>
+                <li>Subir Documentos o fotos de trafico</li>
+                <li>Desprogramar trafico</li>
+            </ul>
+        </div>
+    </div>
+    <script src="assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/libs/autosize/jquery.autosize.min.js"></script>
+    <script src="assets/js/libs/moment/moment.min.js"></script>
+    <script src="assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/libs/d3/d3.min.js"></script>
+    <script src="assets/js/libs/d3/d3.v3.js"></script>
+    <script src="assets/js/libs/jcookie/jquery.cookie.js"></script>
+    <script src="assets/js/core/source/App.js"></script>
+    <script src="assets/js/core/source/AppNavigation.js"></script>
+    <script src="assets/js/core/source/AppOffcanvas.js"></script>
+    <script src="assets/js/core/source/AppCard.js"></script>
+    <script src="assets/js/core/source/AppForm.js"></script>
+    <script src="assets/js/core/source/AppNavSearch.js"></script>
+    <script src="assets/js/core/source/AppVendor.js"></script>
+    <script type="text/javascript" src="assets/js/libs/jqwidgets/jqx-all.js"></script>
+    <script src="assets/js/libs/bootbox/bootbox.min.js"></script>
+    <script type="text/javascript" src="assets/js/libs/jqwidgets/jqxnotification.js"></script>
+    <script src="assets/js/libs/jqwidgets/jqxdata.export.js" type="text/javascript"></script>
+    <script src="assets/js/libs/dropzone/dropzone.min.js"></script>
+    <script src="assets/js/core/demo/Demo.js"></script>
+    <script src="assets/js/core/demo/dashdirecto.js"></script>
+</body>
+</html>

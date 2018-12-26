@@ -1,0 +1,411 @@
+html {
+  background: url(../../img/proecicorp/1200.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* grid-auto-rows: 500px; */
+}
+/* html {
+    background: linear-gradient(to bottom right, blue,deepskyblue);
+} */
+body {
+  /* height: 100%; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  cursor: default;
+  /* margin: 0; */
+
+  /* background: url(loading.gif); */
+  /* color: #000; */
+}
+/* .parallax{
+    margin: 0px;
+    height: 500px;
+    background: url(images/plane4.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+} */
+.container {
+  height: 30vh;
+  background-color: deepskyblue;
+}
+#menu div {
+  height: 56px;
+  background: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  padding: 7px 0 0 7px;
+}
+
+#menu {
+  position: absolute;
+  bottom: 20px;
+  left: 141px;
+  z-index: 80;
+  width: 100%;
+  line-height: 12px;
+}
+.boxmenu {
+  grid-area: p;
+  /* width:300px;
+    height:250px; */
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* position: absolute;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+     */
+}
+/* align-items: flex-start ; */
+.boxmenu::after {
+  content: "";
+  /* width: 300px;
+	height: 200px; */
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.field {
+  align-self: center;
+  transition: all 0.5s;
+}
+.boxmenu input {
+  opacity: 1;
+  z-index: 100;
+  position: relative;
+  transition: all 0.5s;
+}
+.boxmenu span {
+  z-index: 100 !important;
+  transition: all 0.2s ease-out;
+}
+.boxmenu .field:hover .icon {
+  transform: scale(1.5);
+}
+.animated {
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.image {
+  display: flex;
+  align-self: center;
+  margin: 10px;
+  z-index: 100;
+  width: 137px !important;
+  transition: 500ms;
+  animation-duration: 1.5s;
+  transition: all 0.5s;
+  /* animation: pulse; */
+}
+.scale {
+  transition-delay: 0.5s;
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+  /* animation: pulse 0.6s; */
+}
+.img {
+  /* background-color: tomato; */
+  /* background-color: black; */
+  display: flex;
+  /* border: solid red 2px; */
+  /* padding-top: 100px; */
+  width: 100%;
+  height: 100%;
+}
+.upperleft {
+  grid-area: ul;
+  flex-direction: row;
+  justify-content: flex-end;
+  /*align-items: flex-end; */
+}
+.upper {
+  grid-area: u;
+  flex-direction: row;
+  justify-content: center;
+  /*align-items: flex-end; */
+}
+.upperright {
+    grid-area: ur;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* background-color: white; */
+}
+.bottomleft {
+  grid-area: bl;
+  flex-direction: row;
+  justify-content: flex-end;
+  /*align-items: flex-end; */
+}
+.bottom{
+    grid-area: b;
+    flex-direction: row;
+    justify-content: center;
+}
+.bottomright{
+    grid-area: br;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+/* .left {
+  grid-area: c;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+} */
+
+.app {
+  margin-top: 13%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* grid-template-columns: repeat( auto-fit, 33% ); */
+  grid-template-rows: 1fr 2fr 1fr;
+  justify-items: center;  
+  grid-template-areas:
+    "ul u ur"
+    "p p p"
+    "bl b br";
+  /* display: grid;
+    grid-template-columns: repeat(10, 10fr);
+    grid-gap: 10px;
+    grid-auto-rows: 100px; */
+}
+/* @media (max-width: 600px) {
+    .scale{
+        transform: scale(1);
+        animation: pulse 0.6s;
+    }
+} */
+/* --------- KeyFrames Images Animation -------------- */
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.rollout-enter-active {
+  animation: rollout 0.5s;
+}
+.rollout-leave-active {
+  animation: rollout 0.5s reverse;
+}
+@keyframes rollout {
+  0% {
+    transform: translateY(-400px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+  }
+}
+.rollleft-enter-active {
+  animation: rollleft 0.5s;
+}
+.rollleft-leave-active {
+  animation: rollleft 0.5s reverse;
+}
+@keyframes rollleft {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+  }
+}
+.rollcorner-enter-active {
+  animation: rollcorner 0.5s;
+}
+.rollcorner-leave-active {
+  animation: rollcorner 0.5s reverse;
+}
+@keyframes rollcorner {
+  0% {
+    transform: translate(-400px,400px);
+  }
+  100% {
+    -webkit-transform: translate(0px,0px);
+  }
+}
+.skew-enter-active {
+    animation: skew 0.5s;
+  }
+  .skew-leave-active {
+    animation: skew 0.5s reverse;
+  }
+  @keyframes skew {
+    0% {
+      transform: skew(40deg,40deg)
+    }
+    100% {
+      -webkit-transform: skew(0,0);
+    }
+  }
+  .rotate-enter-active {
+    animation: rotate 0.5s;
+  }
+  .rotate-leave-active {
+    animation: rotate 0.5s reverse;
+  }
+  @keyframes rotate {
+    0% {
+        transform: translate3d(1px, 1px, 50px) rotate3d(3, 2, 2, 90deg);
+      
+    }
+    100% {
+      -webkit-transform: translate3d(0,0,0);
+    }
+  }
+
+  /* ---------- END KeyFrames ------------------- */
+/* ------------BEGIN Hover Imagen Animation------------- */
+  .proeci:hover {
+    /* transform: scale(1.1); */
+    animation: pulse 0.8s;
+    animation-iteration-count: infinite;
+    /* animation-play-state: running; */
+  }
+  .dash:hover {
+    /* transform: scale(1.1); */
+    animation: flash 2s;
+    animation-iteration-count: infinite;
+    /* animation-play-state: running; */
+  }
+  .aduanet:hover {
+    /* transform: scale(1.1); */
+    animation: bounce 1.5s;
+    animation-iteration-count: infinite;
+    /* animation-play-state: running; */
+  }
+  .slamnet:hover {
+    /* transform: scale(1.1); */
+    animation: rubberBand 2s;
+    animation-iteration-count: infinite;
+    /* animation-play-state: running; */
+  }
+  .vucem:hover {
+    /* transform: scale(1.1); */
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+    /* animation-play-state: running; */
+  }
+  .cove:hover{
+    animation: swing 2s;
+    animation-iteration-count: infinite;
+  }
+  .patio:hover{
+    animation: tada 2s;
+    animation-iteration-count: infinite;
+  }
+  /* -------------- END Hover Imagen Animation -------------- */
+/* .fadel-enter-active {
+    transition: all .3s ease;
+    transform: translateX(100%);
+  }
+  .fadel-enter-to{
+      
+    transform: translateX(0);
+  }
+  .fadel-leave-active {
+   
+    transform: translateX(100%);
+      
+  }
+  .fadel-leave-to{
+    opacity: 0;
+    height: 0;
+    width: 0;  
+  } */
+/* .fade-enter, .fade-leave-to {
+    transform: translateX(-100%);
+  }
+  .fade-enter-to, .fade-leave {
+    transform: translateX(0);
+  } */
+/* .fade-enter, .fade-leave-active {
+      transition: .3s;
+    transform: translateX(100%);    
+    opacity: 0;
+    height: 0;
+    width: 0;    
+  } */
+
+/*---------------------------------- NAV BAR------------------------------------- */
+.navmenu {
+  /* background-color: lightslategray; */
+  background: radial-gradient(at top left, #281dff, rgba(24, 133, 221, 0.938));
+  /* margin-top: 70px;
+    margin-bottom: 70px; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  font-size: 30px;
+}
+/* .navmenu::after{
+    content:'';
+    background-color: #000;
+    position: absolute;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 1;    
+    position: absolute;
+    opacity: 0.6;
+    z-index: 1;
+} */
+
+.navmenu span {
+  /* border: 1px solid #000; */
+  padding: 30px;
+  /* background-color: rgba(0, 0, 0, 0.452); */
+  /* background-color: #000;    */
+  transition: all 0.2s ease-out;
+}
+.navmenu span:hover {
+  transform: translate(10px);
+}
+.navmenu .icon {
+  color: darkblue;
+}
+.navmenu span:hover .fas {
+  cursor: pointer;
+  color: aqua;
+}
